@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package protobuf;
+
+service GrpcService {
+  rpc Hello(HelloRequest) returns (HelloResponse) {}
+}
+
+
+message HelloRequest {
+  string input = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
